@@ -1,0 +1,17 @@
+{
+    "bot": {
+        "token": "",
+        "prefix": "!"
+    },
+    "words": {
+        "kufur": ["mk", "amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu", "sex", "seks", "amına", "orospu çocuğu", "sg", "siktir git","orosbu","piç","anan","fuck","fak","your","revenge"],
+		    "tos": ["hile", "nigger", "alah", "llh", "hl", "lader", "al!en", "alien", "h i l e", "hiIem", "hiIen", "live", "hitler", "jew", "yahudi", "niga", "zenci", "dec", "cheat", "cht", "cheetos", "chet", "cheet", "loder", "lder", "allh", "hle", "الله", "crck", "crk", "crca", "hie", "tyyip", "tyip", "tayip", "hıe", "hil", "hıl", "tayyip", "tyiip", "aah", "teyyip", "teyp", "erdoğan", "teyip", "teyyipçi", "tayıp", "tayyıp", "tayiip", "tayyiip", "damat", "bakan", "erdogan", "allah", "atatürk", "alah", "atat", "nıgger", "nigga", "nıgga", "cc", "credit card", "kredi kartı", "hıle", "hek", "hacık", "hıIe", "hilede", "hileden", "hileleri", "crack", "ezglobal", "reverse", "premium", "eglobal", "atompremium", "csrapid", "axeprime", "winnerpremium", "loader", "leak", "crackleri", "hileler", "crackler", "loaderler", "h1le", "h1leden", "hack", "hackleri", "hacki", "hackim", "hilem", "hackimiz", "hilemiz", "hileleri"]
+    },
+    "protection": {
+        "kufur": true,
+        "tos": true,
+        "reklam": true
+    },
+    "link": "ikinci dc bakımda",
+    "botwhitelist": ["link"]
+}
