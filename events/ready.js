@@ -1,6 +1,5 @@
 const Moment = require('moment')
 const Discord = require('discord.js')
-const config = require('./config.json');
 let prefix = '!'
 module.exports = client => {
   
