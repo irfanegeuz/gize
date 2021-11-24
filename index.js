@@ -137,7 +137,7 @@ client.on('message', async (message) => {
   if (command == "link") {
     if (!message.member.roles.cache.find(r => r.id == "911689319901716550")) { return message.reply("**Link alabilmek için Abone Rolün Olması Gerek.**") }
     try {
-        await message.author.send(`Yazılımı İndirmek için Tek Kulanımlık link => ${config.link}`);
+        await message.author.send(`Buyrun link ${config.link}`);
         message.reply('**Başrıyla mesaj gönderildi!**');
     } catch (e) {
         let embed = new Discord.MessageEmbed()
