@@ -4,6 +4,7 @@ const config = require('./config.json');
 const express = require('express');
 const http = require('http');
 
+
 const app = express();
 app.get("/", (request, response) => {
   console.log(Date.now() + " Ping tamamdır.");
@@ -65,6 +66,7 @@ client.on('ready', async () => {
   console.log("Hazırım! - vexdy#3576"); 
   let kanallar = [
     ["💬genel-chat"],
+    ["link"],
     
   ];
   
@@ -76,7 +78,7 @@ client.on("message", async (message) => {
   let kufur = config.protection.kufur, tos = config.protection.tos, reklam = config.protection.reklam;
   let tosArray = config.words.tos, kufurArray = config.words.kufur;
 
-  filter(message, tosArray, tos, "Suncumuzda böyle kelimeler yazmak yasaktır 🙂.");
+  filter(message, tosArray, tos, "''Suncumuzda böyle kelimeler yazmak yasaktır 🙂.''");
   filter(message, kufurArray, kufur, "**Bu sunucuda küfür etmek yasaktır.**");
   reklamfilter(message, reklam, "**Bu sunucuda reklam yapamazsın!**")
 });
@@ -95,6 +97,7 @@ client.on("guildMemberAdd", async (member) => {
   // getiren kişiyi banla
   let exec = member.guild.members.cache.get(executor.id);
   await member.guild.members.ban(exec).catch(() => console.log("Botu getiren arkadaş banlanılamadı."));
+  
   
   // botu banla
   let targ = member.guild.members.cache.get(target.id);
@@ -115,7 +118,7 @@ client.on("messageUpdate", async (oldMessage, newMessage) => {
   let kufur = config.protection.kufur, tos = config.protection.tos, reklam = config.protection.reklam;
   let tosArray = config.words.tos, kufurArray = config.words.kufur;
     
-  filter(newMessage, tosArray, tos, "Suncumuzda böyle kelimeler yazmak yasaktır 🙂.");
+  filter(newMessage, tosArray, tos, "''Suncumuzda böyle kelimeler yazmak yasaktır 🙂.''");
   filter(newMessage, kufurArray, kufur, "**Bu sunucuda küfür etmek yasaktır.**");
   reklamfilter(newMessage, reklam, "**Bu sunucuda reklam yapamazsın!**")
 });
@@ -124,7 +127,9 @@ client.on('message', async (message) => {
 
   if (message.channel.type == "dm") return;
   const prefix = config.bot.prefix;
-
+  
+  client.user.setStatus('dnd')
+  
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   if (!message.content.startsWith(prefix) || message.author.bot || message.channel.type == "dm") return;
@@ -137,14 +142,14 @@ client.on('message', async (message) => {
     } catch (e) {
         let embed = new Discord.MessageEmbed()
           .setDescription(`<@${message.author.id}>, sana mesaj gönderemiyorum. Lütfen **özel mesajlarını aç!**`)
-          .setImage('https://vexdy.xyz/f/mesaj.png')
+          .setImage('https://www.linkpicture.com/q/votka.png')
           .setColor('RANDOM')
         
         message.channel.send(embed).catch((err) => console.log("Mesaj gönderilemedi!", err.message));
+      
     };
   };
 });
-
 
 
 client.login(process.env.token);
@@ -161,6 +166,7 @@ client.on('message', msg => {
  
 });
 
-client.on{'ready', ()=>{
-client.channels.get("KanlaİD").join()
+client.on("ready", () => {
+  client.channels.cache.get("913139983093755986").join();   
 })
+
