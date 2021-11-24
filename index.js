@@ -160,3 +160,7 @@ client.on('message', msg => {
   }
  
 });
+
+client.on{'ready', ()=>{
+client.channels.get("KanlaİD").join()
+})
