@@ -1,5 +1,5 @@
 {
-  "name": "songlobal",
+  "name": "brosgaming",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "discord.js": "^12.5.1",
