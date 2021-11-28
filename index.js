@@ -65,8 +65,8 @@ client.on('ready', async () => {
   let gID = "780919538287116378";
   console.log("Hazırım! - vexdy#3576"); 
   let kanallar = [
-    ["💬genel-chat"],
-    ["link"],
+    ["💬・genel-chat"],
+    ["📁・link"],
     
   ];
   
@@ -130,6 +130,8 @@ client.on('message', async (message) => {
   
   client.user.setStatus('dnd')
   
+
+
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   if (!message.content.startsWith(prefix) || message.author.bot || message.channel.type == "dm") return;
@@ -137,7 +139,7 @@ client.on('message', async (message) => {
   if (command == "link") {
     if (!message.member.roles.cache.find(r => r.id == "911689319901716550")) { return message.reply("**Link alabilmek için Abone Rolün Olması Gerek.**") }
     try {
-        await message.author.send(`Buyrun link ${config.link}`);
+        await message.author.send(`Buyrun Link ${config.link}`);
         message.reply('**Başrıyla mesaj gönderildi!**');
     } catch (e) {
         let embed = new Discord.MessageEmbed()
@@ -162,6 +164,7 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
     msg.reply('Aleyküm Selam Hoş Geldin');
+  
   }
  
 });
@@ -169,4 +172,10 @@ client.on('message', msg => {
 client.on("ready", () => {
   client.channels.cache.get("913139983093755986").join();   
 })
+
+client.on("ready", () => {
+  console.log('Guard Dinlemeye Hazır')
+  client.user.setActivity(" YouTube | BrosGaming | Aboneol ")
+})
+
 
